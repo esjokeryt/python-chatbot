@@ -13,7 +13,7 @@ import openai
 import webbrowser
 import googlesearch
 # Create a Neo4j driver instance
-driver = GraphDatabase.driver("neo4j://localhost:7687", auth=("neo4j", "esjokeryt"))
+driver = GraphDatabase.driver("neo4j://localhost:7687", auth=("neo4j", "password")) #insert your neo4j password
 logindone = False
 name_for_subnet = ''
 check_test = None
@@ -26,7 +26,7 @@ realtionship = ''
 tester = ''
 
 def get_completion(query):
-     openai.api_key = 'pk-JxEzkQZhpELdmlSzkKmhoSlLmNmBMGmDLorASZmrKzXelYRA'
+     openai.api_key = 'pk-******************************************' #insert your api key
      openai.api_base = 'https://api.pawan.krd/v1'
 
      response = openai.Completion.create(
