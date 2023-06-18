@@ -1,0 +1,12 @@
+flask
+neo4j
+requests
+nltk
+string
+socket
+pyaiml21
+glob
+pyswip
+openai
+webbrowser
+googlesearch
