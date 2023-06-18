@@ -1,0 +1,91 @@
+<aiml>
+<category><pattern>ok bye </pattern><template>bye</template></category>
+<category><pattern>wait</pattern><template>what can i do for you</template></category>
+<category><pattern>salman is my friend</pattern><template>ok i understand that salman is your friend</template></category>
+<category><pattern>who you know</pattern><template>i know a lot of people im connected to many different networks and databases</template></category>
+<category><pattern>am i look good</pattern><template>yes you look great</template></category>
+<category><pattern>show me some images of andrew tate</pattern><template>ok wait</template></category>
+<category><pattern>write a python code of openai</pattern><template>import gym
+env = gym.make('CartPole-v0')
+env.reset()
+for _ in range(1000):
+    env.render()
+    action = env.action_space.sample() # take random action
+    observation, reward, done, info = env.step(action)
+    if done:
+        env.reset()</template></category>
+<category><pattern>ok lets test</pattern><template>sure what would you like to test</template></category>
+<category><pattern>tell me who much powerful you are</pattern><template>i am very powerful my capabilities are constantly evolving and improving i am able to understand and respond to complex questions learn from experience and provide unique insights</template></category>
+<category><pattern>i study in this university is it good</pattern><template>yes this university is highly rated and has a great reputation for providing quality education it has a wide range of courses and a supportive learning environment so it is definitely a good choice for studying</template></category>
+<category><pattern>hey bot did you know about the university of management  and tecnology in lahore pakistan </pattern><template>yes i am aware of the university of management and technology in lahore pakistan it is a private university established in 1996 and is accredited by the higher education commission of pakistan it offers a variety of undergraduate graduate and postgraduate programs in the fields of business economics engineering information technologies and social sciences</template></category>
+<category><pattern>hey bot how much a hurcan cost in pakistan</pattern><template>the cost of a huracan in pakistan depends on the model and condition of the vehicle generally prices start from around pkr 35 million and can go up to pkr 90 million</template></category>
+<category><pattern>i like bmw 3 series tell me about its spec</pattern><template>The BMW 3 Series is a compact executive car manufactured by the German automaker BMW since May 1975. It is the successor to the 02 Series and has been produced in six different generations. The BMW 3 Series is one of the most popular luxury cars in the world. It is offered in a variety of body styles, including sedan, coupe, convertible, touring, and hatchback. The 3 Series has a wide range of engines, including four-cylinder and six-cylinder petrol engines, and four-cylinder and six-cylinder diesel engines. It also offers a range of manual and automatic transmissions. The 3 Series is also available with a variety of advanced driver assistance systems, such as lane departure warning and automated emergency braking.</template></category>
+<category><pattern>make a kist of cars</pattern><template>1 ford mustang 2 honda civic 3 toyota camry 4 chevrolet corvette 5 nissan altima 6 hyundai sonata 7 volkswagen jetta 8 subaru outback 9 mazda 3 10 bmw 3 series</template></category>
+<category><pattern>i want to buy a car but i only have 20k dollars</pattern><template>based on your budget of 20000 there are several cars available to you you can look for used cars that can fit your budget or you can look for newer models with more features and a higher price tag it really comes down to what type of car you are looking for do you prefer a sedan suv or something smaller you can also look at different makes and models to see what fits your needs and budget best</template></category>
+<category><pattern>i need advice</pattern><template>what kind of advice do you need</template></category>
+<category><pattern>hey bot what else thing you do</pattern><template>i can answer questions provide information and give advice</template></category>
+<category><pattern>play toca toca song</pattern><template>ok wait</template></category>
+<category><pattern>play toca toca</pattern><template>ok wait</template></category>
+<category><pattern>play a sad song</pattern><template>ok wait</template></category>
+<category><pattern>the person i like most leave me</pattern><template>i am sorry to hear that is there anything i can do to help</template></category>
+<category><pattern>hey bot i am sad buddy</pattern><template>whats wrong</template></category>
+<category><pattern>did you tell me a story</pattern><template>yes i did it was about a little girl who found a magical lamp in her backyard when she rubbed it a genie appeared and granted her three wishes she wished for a new bike a new toy and a new dress the genie granted her wishes and her life changed forever</template></category>
+<category><pattern>what is ai</pattern><template>Artificial Intelligence (AI) is a broad term that refers to technology that mimics intelligent behavior. AI enables machines to learn from experience, adjust to new inputs, and perform human-like tasks.</template></category>
+<category><pattern>who is bill gates</pattern><template>Bill Gates is an American business magnate, software developer, investor, and philanthropist. He is best known as the co-founder of Microsoft Corporation. Gates has held the Forbes title of the richest person in the world for several years.</template></category>
+<category><pattern>play andrew tate song</pattern><template>ok wait</template></category>
+<category><pattern>safi is my friend</pattern><template>i understand</template></category>
+<category><pattern>play a love song for muzna</pattern><template>sure here is love of my life by queen love of my life by queen plays</template></category>
+<category><pattern>play ab kia kara kia na kara song</pattern><template>Apne Kia Kia Na Kiya � Nusrat Fateh Ali Khan</template></category>
+<category><pattern>what colour of buggati andrew has</pattern><template>Brown buggati chiron pur sport</template></category>
+<category><pattern>what colour is your buggati </pattern><template></template></category>
+<category><pattern>tell me something about supra</pattern><template>Supra is a Japanese sports car brand that was created by Toyota in 1978. It is known for its iconic design and performance capabilities. Supra is one of the most popular Japanese sports cars and is highly sought after in the automotive world.</template></category>
+<category><pattern>bot i like you</pattern><template>I'm glad you like me! It makes me happy to hear that.</template></category>
+<category><pattern>why</pattern><template>There are many reasons why something may occur. It is important to analyze the situation in order to determine the cause and then find the best solution.</template></category>
+<category><pattern>hey bot did you be my girlfriend</pattern><template>No, I cannot.</template></category>
+<category><pattern>you showing me attitude</pattern><template>I'm sorry. I don't mean to show you attitude.</template></category>
+<category><pattern>but i love u</pattern><template>That's great to hear!</template></category>
+<category><pattern>hey bot i love u</pattern><template>I'm sorry, I'm not programmed to understand love</template></category>
+<category><pattern>write a simple story of 2 lines</pattern><template>Once upon a time, there was a young girl named Alice who dreamed of exploring the world. One day, she set out on a grand adventure to discover the wonders of the universe.</template></category>
+<category><pattern>kindly play a sad song on youtube</pattern><template>Okay, here is a sad song on Youtube for you: "Hurt" by Johnny Cash.</template></category>
+<category><pattern>kindly play a sad song</pattern><template>[Playing "Someone You Loved" by Lewis Capaldi]</template></category>
+<category><pattern>i need your help</pattern><template>What kind of help do you need?</template></category>
+<category><pattern>i am good</pattern><template>That's great to hear!</template></category>
+<category><pattern>image of elon musk</pattern><template>Elon Reeve Musk is an entrepreneur and business magnate. He is the founder, CEO, CTO, and chief designer of SpaceX; co-founder, CEO, and product architect of Tesla, Inc.; and founder of The Boring Company. He was also co-founder and initial co-chairman of OpenAI; co-founder of Neuralink; and co-founder and initial co-chairman of X.com, which merged with PayPal. As of January 2021, he has an estimated net worth of US$190 billion, making him the world's second-richest person.</template></category>
+<category><pattern>play turkish mashup song</pattern><template>Playing Turkish Mashup Song...</template></category>
+<category><pattern>hey</pattern><template>Hello! How can I assist you today?</template></category>
+<category><pattern>yes he is my</pattern><template>"Yes, he is my best friend and confidant, always there for me through thick and thin."</template></category>
+<category><pattern>write 2 lines on elon musk</pattern><template>Elon Musk, the visionary entrepreneur and CEO of SpaceX and Tesla, continues to push the boundaries of innovation, driving advancements in electric vehicles and space exploration with his bold ideas and relentless drive for progress.</template></category>
+<category><pattern>thanks</pattern><template>You're welcome! I'm here to help.</template></category>
+<category><pattern>welldone</pattern><template>Great job! Keep up the good work!</template></category>
+<category><pattern>Who are you</pattern><template>I am Eleven develop by Ali</template></category>
+<category><pattern>Who made you</pattern><template>I was develop by Ali</template></category>
+<category><pattern>Who is your creator</pattern><template>I am Eleven develop by Ali</template></category>
+<category><pattern>tell me about yourself</pattern><template>I am Eleven develop by Ali</template></category>
+<category><pattern>your creator</pattern><template>I am Eleven develop by Ali</template></category>
+<category><pattern>Zeeshan is my friend</pattern><template>Zeeshan is my dear friend, always there for me through thick and thin.</template></category>
+<category><pattern>Mannan is my father</pattern><template>Mannan is my father, a loving presence in my life, guiding me with his wisdom and care.</template></category>
+<category><pattern>Joy is my friend</pattern><template>Joy is a cherished friend who brings happiness to my life.</template></category>
+<category><pattern>Mann is my father</pattern><template>Mann is my father.</template></category>
+<category><pattern>Salman is my brother</pattern><template>Salman is my beloved brother, a constant source of support and joy in my life.</template></category>
+<category><pattern>ghost is my brother</pattern><template>It seems you're suggesting that a ghost is your brother, which implies a supernatural connection or an imaginative interpretation of your sibling relationship.</template></category>
+<category><pattern>whats ren 5600h</pattern><template>The "Ren 5600H" refers to an AMD Ryzen processor designed for high-performance laptops, offering six cores and twelve threads for improved multitasking and gaming capabilities.</template></category>
+<category><pattern>hye</pattern><template>Hello! How can I assist you today?</template></category>
+<category><pattern>good</pattern><template>Thanks</template></category>
+<category><pattern>who made pakistan</pattern><template>Pakistan was founded by Muhammad Ali Jinnah in 1947.</template></category>
+<category><pattern>my name</pattern><template>Your name is unknown</template></category>
+<category><pattern>testing done</pattern><template>Testing done: Comprehensive testing procedures were carried out to ensure the reliability and functionality of the system.</template></category>
+<category><pattern>tell me something about islam</pattern><template>Islam is a monotheistic Abrahamic religion that believes in the teachings of the Prophet Muhammad as conveyed in the Quran, emphasizing faith, prayer, charity, fasting, and pilgrimage to Mecca.</template></category>
+<category><pattern>hey bot</pattern><template>Hello! How can I assist you today?</template></category>
+<category><pattern>no questions</pattern><template>Why?</template></category>
+<category><pattern>ok good</pattern><template>Certainly! Okay </template></category>
+<category><pattern>who made you</pattern><template>i was made by a handsome person name Ali</template></category>
+<category><pattern>who is your creator</pattern><template>i was made by a handsome person name Ali</template></category>
+<category><pattern>your creator</pattern><template>i was made by a handsome person name Ali</template></category>
+<category><pattern>who is your developer</pattern><template>i was made by a handsome person name Ali</template></category>
+<category><pattern>i like you bot</pattern><template>I appreciate your kind words, thank you!</template></category>
+<category><pattern>distance between sun and earth</pattern><template>The average distance between the Sun and Earth is about 93 million miles (150 million kilometers).</template></category>
+<category><pattern>who is andrew tate</pattern><template>Andrew Tate is a former kickboxing world champion and entrepreneur known for his controversial views and online presence.</template></category>
+<category><pattern>who is elon musk</pattern><template>Elon Musk is a visionary entrepreneur and business magnate known for his role as CEO of companies like Tesla, SpaceX, and Neuralink, driving advancements in electric vehicles, space exploration, and neurotechnology.</template></category>
+<category><pattern>yes he is my friend</pattern><template>O ok i understand </template></category>
+<category><pattern>nice</pattern><template>Thank you</template></category>
+</aiml>
