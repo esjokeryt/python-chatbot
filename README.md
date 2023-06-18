@@ -15,7 +15,7 @@ git clone <repository_url>
 2. Install the required dependencies:
 
 ```bash
-pip install flask neo4j nltk pyaiml21 pyswip openai google
+pip install -r requirements.txt
 ```
 
 3. Download the NLTK packages:
