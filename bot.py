@@ -52,7 +52,7 @@ def predict_gender(name):
     return prediction[0]
 
 def get_completion(query):
-     openai.api_key = 'pk-JxEzkQZhpELdmlSzkKmhoSlLmNmBMGmDLorASZmrKzXelYRA'
+     openai.api_key = 'pk-*******************************************'
      openai.api_base = 'https://api.pawan.krd/v1'
 
      response = openai.Completion.create(
