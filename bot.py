@@ -8,12 +8,16 @@ import string
 import socket
 from pyaiml21 import Kernel
 from glob import glob
-from pyswip import Prolog
+import pytholog as pl
 import openai
 import webbrowser
 import googlesearch
+import pandas as pd
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
 # Create a Neo4j driver instance
-driver = GraphDatabase.driver("neo4j://localhost:7687", auth=("neo4j", "password")) #insert your neo4j password
+driver = GraphDatabase.driver("neo4j://localhost:7687", auth=("neo4j", "esjokeryt"))
 logindone = False
 name_for_subnet = ''
 check_test = None
@@ -24,9 +28,31 @@ getname = ''
 name_of_user = ''
 realtionship = ''
 tester = ''
+df = pd.read_csv('names_dataset.csv')
+
+# Prepare the data
+X = df['name']
+y = df['gender']
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Vectorize the names using CountVectorizer
+vectorizer = CountVectorizer()
+X_train_vectorized = vectorizer.fit_transform(X_train)
+
+# Train a Random Forest classifier
+model = RandomForestClassifier()
+model.fit(X_train_vectorized, y_train)
+
+# Function to predict the gender of a given name
+def predict_gender(name):
+    name_vectorized = vectorizer.transform([name])
+    prediction = model.predict(name_vectorized)
+    return prediction[0]
 
 def get_completion(query):
-     openai.api_key = 'pk-******************************************' #insert your api key
+     openai.api_key = 'pk-JxEzkQZhpELdmlSzkKmhoSlLmNmBMGmDLorASZmrKzXelYRA'
      openai.api_base = 'https://api.pawan.krd/v1'
 
      response = openai.Completion.create(
@@ -217,14 +243,15 @@ def get_name2():
         return get_name(response).lower()
      
 def save_relationship(person1, person2, relationship):
-    prolog.assertz(f"relationship({person1}, {person2}, {relationship})")
-
-def write_relationships_to_file(file_path):
-    with open(file_path, "a") as file:
-        query = "relationship(X, Y, Z)"
-        results = list(prolog.query(query))
-        for result in results:
-            file.write(f"{result['X']}, {result['Y']}, {result['Z']}.\n")
+    gender1 = predict_gender(person1)
+    gender2 = predict_gender(person2)
+    knowledge = f'''{gender1}({person1})
+    {gender2}({person2})
+    {realtionship}({person2},{person1})'''
+    with open(r'relationships.pl', 'a') as file:
+        file.write(knowledge)
+    remove_duplicates(r'C:\BOT\relationships.pl')
+       
 
 def remove_duplicates(file_path):
     # Read the file and store unique relationships in a set
@@ -240,18 +267,15 @@ def remove_duplicates(file_path):
             
 def create_siblings(name):
     name = name.replace(" ", "")
+    gender = predict_gender(name)
     with driver.session() as session:
         session.run(
-            "CREATE (u:User {username: $name})",
-            name=name
+            "CREATE (u:User {username: $name , gender: $gender})",
+            name=name,
+            gender=gender
         )
 
     
-# Initialize the Prolog engine
-prolog = Prolog()
-
-# Load the existing Prolog file or create a new one
-prolog.consult("relationships.pl")
 
 app = Flask(__name__)
 app.secret_key = 'esjokeryt'  # Set a secret key for session management
@@ -260,7 +284,7 @@ k = Kernel()
 aiml_files = glob("AIML_FILES/*.aiml")
 for file_path in aiml_files:
     k.learn_aiml(file_path)
-k.learn(r'D:\BOT\Easy-Chatbot-master\AIML_FILES\test.aiml')
+k.learn(r'AIML_FILES\test.aiml')
 
 @app.route("/")
 def home():
@@ -306,12 +330,14 @@ def signup():
         username = request.form.get('username')
         password = request.form.get('password')
         subnet_address = get_subnet_address()
+        gender = predict_gender(username)
         with driver.session() as session:
             session.run(
-                "CREATE (u:User {username: $username, password: $password, subnet: $subnet_address})",
+                "CREATE (u:User {username: $username, password: $password, subnet: $subnet_address , gender: $gender})",
                 username=username,
                 password=password,
-                subnet_address=subnet_address
+                subnet_address=subnet_address,
+                gender=gender
             )
 
         message = "Account created successfully!"
@@ -353,7 +379,6 @@ def get_bot_response():
                     name2 = str(get_name(query).lower())
                 realtionship = extract_relationship(query)
                 save_relationship(name2,name_of_user,realtionship)
-                write_relationships_to_file("relationships.pl")
                 if "yes" in query or "Yes" in query:
                     pass
                 else:
@@ -386,7 +411,7 @@ def get_bot_response():
                             result = get_completion(query)
                         result = nltk_check_function(result)
                         aiml_data = f'<category><pattern>{query}</pattern><template>{result}</template></category>'
-                        aiml_file_path = r"D:\BOT\Easy-Chatbot-master\AIML_FILES\test.aiml"
+                        aiml_file_path = r"AIML_FILES\test.aiml"
         
                         with open(aiml_file_path, 'r') as file:
                             content = file.readlines()
